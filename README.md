@@ -53,6 +53,35 @@ python scrape_articles.py 5
 - Depends on current API structure
 - May require updates if website changes
 
+## Markdown Enrichment
+
+### Metadata Enrichment with OpenAI
+
+The `enrich_markdown.py` script allows you to automatically enhance your markdown files with AI-generated metadata:
+
+#### Prerequisites
+- OpenAI API Key
+- Python dependencies (install with `pip install -r requirements.txt`)
+
+#### Usage
+```bash
+# Enrich all markdown files in the 'articles' directory
+export OPENAI_API_KEY='your-openai-api-key'
+python enrich_markdown.py
+
+# Enrich a specific markdown file
+python enrich_markdown.py -f articles/nbnboxes.md
+
+# Enrich markdown files in a different directory
+python enrich_markdown.py -d path/to/markdown/files
+```
+
+#### What It Does
+- Reads markdown files from a specified directory or a specific file
+- Generates a concise summary for each article
+- Extracts key themes and keywords
+- Updates the markdown files' frontmatter with new metadata
+
 ## Contributing
 
-Feel free to open issues or submit pull requests to improve the scraper.
+Feel free to open issues or submit pull requests to improve the scraper or enrichment script.
