@@ -9,3 +9,4 @@ wheels/
 # Virtual environments
 .venv
 articles/*
+articles.zip
